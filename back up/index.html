@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light" />
+    <title>Elijah James F. Santos — Software Engineer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="mac-window">
+      <!-- TITOL BAR -->
+      <div class="titlebar">
+        <div class="traffic-lights">
+          <span class="light red"></span>
+          <span class="light yellow"></span>
+          <span class="light green"></span>
+        </div>
+
+        <div class="window-title">Elijah Santos — Portfolio</div>
+
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          🌙
+        </button>
+      </div>
+
+      <div class="window-body">
+        <!-- SIDEBAR -->
+        <nav class="sidebar">
+          <div class="sidebar-profile">
+            <!-- PROFILE PHOTO -->
+            <div class="avatar">
+              <img src="./pic.jpeg" alt="Elijah Santos" />
+            </div>
+
+            <div class="sidebar-name">Elijah James F. Santos</div>
+
+            <div class="sidebar-role">
+              Software Engineer | Front-End Development
+            </div>
+          </div>
+
+          <!-- NAVIGATION -->
+
+          <button class="nav-item active" data-view="home">
+            <span class="nav-icon">🏠</span>
+            Home
+          </button>
+
+          <button class="nav-item" data-view="stack">
+            <span class="nav-icon">🧩</span>
+            Tech Stack
+          </button>
+
+          <button class="nav-item" data-view="projects">
+            <span class="nav-icon">📁</span>
+            Projects
+          </button>
+
+          <button class="nav-item" data-view="about">
+            <span class="nav-icon">👤</span>
+            About
+          </button>
+
+          <button class="nav-item" data-view="contact">
+            <span class="nav-icon">✉️</span>
+            Contact
+          </button>
+        </nav>
+
+        <!-- PARA MAGITNA YUNG CONTENT -->
+        <main class="content">
+          <!-- BAHAY NI ELI -->
+          <section class="view active" id="view-home">
+            <h1>
+              Hi, I'm Eli
+              <span class="wave">👋</span>
+            </h1>
+
+            <p class="lede">
+              I'm an aspiring software engineer working across web, systems, and
+              databases — currently looking for my first role on an engineering
+              team.
+            </p>
+
+            <div class="quick-links">
+              <button class="pill" data-goto="stack">
+                See my tech stack →
+              </button>
+
+              <button class="pill" data-goto="projects">
+                View projects →
+              </button>
+
+              <button class="pill" data-goto="about">
+                Get to know me →
+              </button>
+
+              <button class="pill" data-goto="contact">
+                Connect with me →
+              </button>
+
+              <div class="stats-row">
+              <div class="stat-card">
+              <div class="stat-num">2</div>
+              <div class="stat-label">Featured Projects</div>
+           </div>
+
+             <div class="stat-card">
+             <div class="stat-num">12</div>
+             <div class="stat-label">Technologies</div>
+          </div>
+
+             <div class="stat-card">
+             <div class="stat-num">🎓</div>
+             <div class="stat-label">STI College Global City</div>
+          </div>
+        </div>
+        <p class="strip-label"></p>
+          <div class="tech-strip">
+            <i class="devicon-html5-plain colored"></i>
+            <i class="devicon-css3-plain colored"></i>
+            <i class="devicon-javascript-plain colored"></i>
+            <i class="devicon-python-plain colored"></i>
+            <i class="devicon-java-plain colored"></i>
+            <i class="devicon-csharp-plain colored"></i>
+            <i class="devicon-react-original colored"></i>
+            <i class="devicon-github-original"></i>
+            <i class="devicon-microsoftsqlserver-plain colored"></i>
+            <i class="devicon-mysql-original colored"></i>
+            <i class="devicon-oracle-original colored"></i>
+            <i class="devicon-mongodb-plain colored"></i>
+          </div>
+          </section>
+
+          <!-- TECH STACKS NI ELI -->
+          <section class="view" id="view-stack">
+            <h2>Tech Stack</h2>
+
+            <p class="section-sub">Click a tile to see what it is.</p>
+
+            <!-- LANGUAGES -->
+            <div class="stack-category">
+              <p class="category-label">Languages</p>
+              <div class="tile-grid">
+                <button class="tile" data-info="html">
+                  <i class="devicon-html5-plain colored"></i>
+                  <span>HTML</span>
+                </button>
+
+                <button class="tile" data-info="css">
+                  <i class="devicon-css3-plain colored"></i>
+                  <span>CSS</span>
+                </button>
+
+                <button class="tile" data-info="js">
+                  <i class="devicon-javascript-plain colored"></i>
+                  <span>JavaScript</span>
+                </button>
+
+                <button class="tile" data-info="python">
+                  <i class="devicon-python-plain colored"></i>
+                  <span>Python</span>
+                </button>
+
+                <button class="tile" data-info="java">
+                  <i class="devicon-java-plain colored"></i>
+                  <span>Java</span>
+                </button>
+
+                  <button class="tile" data-info="csharp">
+                    <i class="devicon-csharp-plain colored"></i>
+                    <span>C#</span>
+                  </button>
+                </button>
+              </div>
+            </div>
+
+            <!-- FRAMEWORKS AND LIBRARIES -->
+            <div class="stack-category">
+              <p class="category-label">Frameworks & Libraries</p>
+
+              <div class="tile-grid">
+                <button class="tile" data-info="react">
+                  <i class="devicon-react-original colored"></i>
+                  <span>React</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- TOOLS & PLATFORMS -->
+             <div class="stack-category">
+              <p class="category-label">Tools & Platforms</p>
+
+              <div class="title-grid">
+               <button class="tile" data-info="github">
+                  <i class="devicon-github-original"></i>
+                  <span>GitHub</span>
+                  </button>
+                  </div>
+                </div>
+
+            <!-- DATABASES -->
+            <div class="stack-category">
+              <p class="category-label">Databases</p>
+
+              <div class="tile-grid">
+                <button class="tile" data-info="mssql">
+                  <i class="devicon-microsoftsqlserver-plain colored"></i>
+                  <span>MSSQL</span>
+                </button>
+
+                <div class="tile-grid">
+                <button class="tile" data-info="mysql">
+                  <i class="devicon-mysql-original colored"></i>
+                  <span>MYSQL</span>
+                </button>
+
+                <button class="tile" data-info="oracle">
+                  <i class="devicon-oracle-original colored"></i>
+                  <span>Oracle DB</span>
+                </button>
+
+                <button class="tile" data-info="mongodb">
+                  <i class="devicon-mongodb-plain colored"></i>
+                  <span>MongoDB</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- TECH INFO -->
+            <div class="info-panel" id="info-panel">
+              <p class="info-placeholder">
+                Select a tile above to see details here.
+              </p>
+            </div>
+          </section>
+
+          <!-- PROJECTS NI ELI -->
+          <section class="view" id="view-projects">
+            <h2>Projects</h2>
+            <p class="section-sub">Click a project to expand it.</p>
+
+            <div class="disclosure-row open">
+              <button class="disclosure-trigger">
+                <span class="chevron">▸</span>
+                <span class="row-title">HanaPark</span>
+                <span class="row-meta">HTML · CSS · JS · React</span>
+              </button>
+              <div class="disclosure-body">
+                <p>
+                  Smart web-based parking availability and reservation system
+                  built for STI College Global City. Provides real-time parking
+                  information and lets users reserve available spaces, reducing
+                  parking congestion and improving convenience. Built as the
+                  frontend developer on this capstone project.
+                </p>
+                <a
+                  href="https://hanapark.online"
+                  target="_blank"
+                  rel="noopener"
+                  class="pill small"
+                  >View project →</a
+                >
+              </div>
+            </div>
+
+            <div class="disclosure-row">
+              <button class="disclosure-trigger">
+                <span class="chevron">▸</span>
+                <span class="row-title"
+                  >Wayward Games Network Infrastructure</span
+                >
+                <span class="row-meta"
+                  >AutoCAD · Figma · Cisco Packet Tracer</span
+                >
+              </button>
+              <div class="disclosure-body">
+                <p>
+                  Strategizing, designing, and configuring network
+                  infrastructure for Wayward Games through network simulation.
+                  Covers how a 5-story building's network connections are laid
+                  out, with recommended PC specs for each department to operate
+                  flawlessly.
+                </p>
+                <a
+                  href="wayward-games.html"
+                  target="_blank"
+                  rel="noopener"
+                  class="pill small"
+                  >View project →</a
+                >
+              </div>
+            </div>
+          </section>
+
+          <!-- ABOUT KAY ELI -->
+         <section class="view" id="view-about">
+            <h2>About</h2>
+
+            <p class="placeholder">
+              I’m a fresh IT graduate with a Bachelor of Science in Information
+              Technology, majoring in Game Development, with a strong interest
+              in web development and artificial intelligence. I have academic
+              experience working with HTML, CSS, JavaScript, React, and
+              designing UI/UX, while continuously expanding my skills in AI and
+              cybersecurity. As the team leader of HanaPark, a smart parking
+              availability and reservation system, I gained hands-on experience
+              in developing and leading a real-world project. I’m currently
+              aspiring to build a career as a Front-End Developer or Software
+              Engineer, creating modern, user-focused, and innovative solutions.
+            </p>
+
+            <!-- Life Outside the Computer -->
+            <div class="life-outside">
+              <button class="life-toggle" id="lifeToggle">
+                <span>Life Outside the Computer</span>
+                <span id="lifeArrow">▼</span>
+              </button>
+
+              <div class="life-content" id="lifeContent">
+
+               <div class="life-icons">
+
+              <!-- Pokémon -->
+              <div class="life-item">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg"
+                  alt="Pokémon"
+                >
+                <span>Pokémon</span>
+              </div>
+
+              <!-- Discord -->
+              <div class="life-item">
+                <img
+                  src="https://cdn.simpleicons.org/discord"
+                  alt="Discord"
+                >
+                <span>Discord</span>
+              </div>
+
+              <!-- YouTube -->
+              <div class="life-item">
+                <img
+                  src="https://cdn.simpleicons.org/youtube"
+                  alt="YouTube"
+                >
+                <span>YouTube</span>
+              </div>
+
+              <!-- Guitar -->
+              <div class="life-item">
+                <div class="silhouette">🎸</div>
+                <span>Electric Guitar</span>
+              </div>
+
+              <!-- Car -->
+              <div class="life-item">
+                <div class="silhouette">🚗</div>
+                <span>Cars</span>
+              </div>
+
+            </div>
+
+            <p>
+              When I’m away from the computer, I usually like to slow down,
+              relax, and enjoy the things I’m interested in. I spend my free
+              time playing games, playing electric guitar, talking with
+              friends on Discord, opening Pokémon TCG packs, and watching
+              K-dramas, anime, and YouTube.
+            </p>
+
+            <p>
+              I’m also interested in cars, guitars, Pokémon cards, the latest
+              technology, and exploring household decorations and appliances.
+              Most of the time, I simply enjoy chilling and spending time with
+              my hobbies and interests. I find that having time to relax and
+              enjoy these things helps me recharge and come back to my work
+              with a fresh mind.
+            </p>
+
+          </div>
+            </div>
+          </section>
+
+          <!-- PANO I CONTACT SI ELI -->
+          <section class="view" id="view-contact">
+            <h2>Contact</h2>
+
+            <div class="contact-card">
+              <button type="button" class="contact-row" id="copy-email-btn" data-email="elijahjames_santos@yahoo.com">
+                <span class="contact-icon">✉️</span>
+                <span id="copy-email-text">elijahjames_santos@yahoo.com</span>
+              </button>
+
+              <a
+                href="https://github.com/yourusername"
+                target="_blank"
+                rel="noopener"
+                class="contact-row"
+              >
+                <span class="contact-icon">🐙</span>
+                <span>github.com/eliiisantos</span>
+              </a>
+
+              <a
+                href="https://linkedin.com/in/yourusername"
+                target="_blank"
+                rel="noopener"
+                class="contact-row"
+              >
+                <span class="contact-icon">💼</span>
+                <span>linkedin.com/in/elijah-james-santos-1762a33b9?</span>
+              </a>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+  </body>
+</html>
