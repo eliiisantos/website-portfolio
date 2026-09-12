@@ -1,6 +1,12 @@
-/* =========================================
-   LIGHTBOX
-========================================= */
+/* LIGHTBOX */
+const backLink = document.getElementById("back-link");
+
+backLink.addEventListener("click", (e) => {
+  if (window.opener) {
+    e.preventDefault();
+    window.close();
+  }
+});
 
 const lightbox =
   document.getElementById("lightbox");
@@ -12,9 +18,7 @@ const closeBtn =
   document.getElementById("lightbox-close");
 
 
-/* =========================================
-   GALLERY
-========================================= */
+/* GALLERY */
 
 document
   .querySelectorAll(".gallery-item")

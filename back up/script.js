@@ -218,6 +218,74 @@ const lifeContent = document.getElementById("lifeContent");
 const lifeArrow = document.getElementById("lifeArrow");
 
 lifeToggle.addEventListener("click", () => {
-  lifeContent.classList.toggle("active");
+  const isOpen = lifeContent.classList.contains("active");
+
+  if (isOpen) {
+    // Closing — animate back down to 0
+    lifeContent.style.maxHeight = lifeContent.scrollHeight + "px";
+    requestAnimationFrame(() => {
+      lifeContent.style.maxHeight = "0px";
+    });
+    lifeContent.classList.remove("active");
+  } else {
+    // Opening — measure the real content height and use that
+    lifeContent.classList.add("active");
+    lifeContent.style.maxHeight = lifeContent.scrollHeight + "px";
+  }
+
   lifeToggle.classList.toggle("active");
 });
+
+/* CERTIFICATE LIGHTBOX */
+
+const certLightbox = document.getElementById("cert-lightbox");
+
+if (certLightbox) {
+  const certLightboxImg = document.getElementById("cert-lightbox-img");
+  const certLightboxClose = document.getElementById("cert-lightbox-close");
+
+  document.querySelectorAll(".gallery-item").forEach((item) => {
+    item.addEventListener("click", () => {
+      certLightboxImg.src = item.dataset.full;
+      certLightboxImg.alt = item.querySelector("img").alt;
+      certLightbox.classList.add("open");
+    });
+  });
+
+  function closeCertLightbox() {
+    certLightbox.classList.remove("open");
+    certLightboxImg.src = "";
+  }
+
+  certLightboxClose.addEventListener("click", closeCertLightbox);
+  certLightbox.addEventListener("click", (e) => {
+    if (e.target === certLightbox) closeCertLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeCertLightbox();
+  });
+}
+
+/* OJT SUMMARY DROPDOWN */
+
+const ojtToggle = document.getElementById("ojtToggle");
+const ojtContent = document.getElementById("ojtContent");
+
+if (ojtToggle) {
+  ojtToggle.addEventListener("click", () => {
+    const isOpen = ojtContent.classList.contains("active");
+
+    if (isOpen) {
+      ojtContent.style.maxHeight = ojtContent.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        ojtContent.style.maxHeight = "0px";
+      });
+      ojtContent.classList.remove("active");
+    } else {
+      ojtContent.classList.add("active");
+      ojtContent.style.maxHeight = ojtContent.scrollHeight + "px";
+    }
+
+    ojtToggle.classList.toggle("active");
+  });
+}

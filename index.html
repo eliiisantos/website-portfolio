@@ -77,8 +77,13 @@
           </button>
 
           <button class="nav-item" data-view="projects">
-            <span class="nav-icon">📁</span>
-            Projects
+          <span class="nav-icon">📁</span>
+          Projects
+          </button>
+
+          <button class="nav-item" data-view="trainings">
+            <span class="nav-icon">🎓</span>
+            Trainings &amp; Certifications
           </button>
 
           <button class="nav-item" data-view="about">
@@ -126,7 +131,7 @@
 
               <div class="stats-row">
               <div class="stat-card">
-              <div class="stat-num">2</div>
+              <div class="stat-num">4</div>
               <div class="stat-label">Featured Projects</div>
            </div>
 
@@ -307,16 +312,164 @@
                   out, with recommended PC specs for each department to operate
                   flawlessly.
                 </p>
-                <a
-                  href="wayward-games.html"
-                  target="_blank"
-                  rel="noopener"
-                  class="pill small"
-                  >View project →</a
-                >
+                <button
+                    type="button"
+                    class="pill small"
+                    onclick="window.open('wayward-games.html', '_blank')"
+                  >View project →</button>
               </div>
             </div>
+            <div class="disclosure-row">
+            <button class="disclosure-trigger">
+              <span class="chevron">▸</span>
+              <span class="row-title">ProTech — Mobile Security App</span>
+              <span class="row-meta">HTML · CSS · Figma · Canva</span>
+            </button>
+            <div class="disclosure-body">
+              <p>
+                A hard-coded UI/UX design concept for a mobile digital-privacy and security app,
+                covering login and nine core features — from a password strength analyzer to a
+                phishing detector — aimed at helping users protect their data and privacy online.
+              </p>
+              <button
+                type="button"
+                class="pill small"
+                onclick="window.open('protech.html', '_blank')"
+              >View project →</button>
+            </div>
+          </div>
+          <div class="disclosure-row">
+            <button class="disclosure-trigger">
+              <span class="chevron">▸</span>
+              <span class="row-title">Fempreneur</span>
+              <span class="row-meta">Canva</span>
+            </button>
+            <div class="disclosure-body">
+              <p>
+                A commissioned website wireframe for Fempreneur, a small business selling
+                handmade beaded jewelry and vintage clothing. My first web design project —
+                designed entirely in Canva.
+              </p>
+              <button
+                type="button"
+                class="pill small"
+                onclick="window.open('fempreneur.html', '_blank')"
+              >View project →</button>
+            </div>
+          </div>
           </section>
+
+          <!-- TRAININGS AND CERTIFICATIONS -->
+            <section class="view" id="view-trainings">
+              <h2>Trainings &amp; Certifications</h2>
+              <p class="section-sub">Click to expand.</p>
+
+              <div class="disclosure-row open">
+                <button class="disclosure-trigger">
+                  <span class="chevron">▸</span>
+                  <span class="row-title">On-the-Job Training — Office Trainee</span>
+                  <span class="row-meta">Pag-IBIG Fund (HDMF), SM Aura Branch · 486 hours · Feb 16 – Jun 4, 2026</span>
+                </button>
+                <div class="disclosure-body">
+
+                  <div class="gallery" style="margin-bottom:20px;">
+                    <button class="gallery-item" data-full="assets/cert-ojt-pagibig-id.jpg">
+                      <img src="assets/cert-ojt-pagibig-id.jpg" alt="Pag-IBIG Fund trainee ID">
+                      <span class="caption">Trainee ID</span>
+                    </button>
+                    <button class="gallery-item" data-full="assets/cert-ojt-pagibig-certificate.jpg">
+                      <img src="assets/cert-ojt-pagibig-certificate.jpg" alt="Certificate of Completion, Pag-IBIG Fund">
+                      <span class="caption">Certificate of Completion</span>
+                    </button>
+                  </div>
+
+                  <button class="life-toggle" id="ojtToggle">
+                  <span>Read Summary</span>
+                  <span id="ojtArrow" class="toggle-arrow">▼</span>
+                  </button>
+
+                  <div class="life-content" id="ojtContent">
+
+                   <p>
+                  As part of my BS Information Technology program at STI College Global City, I
+                  completed a 486-hour On-the-Job Training as an Office Trainee at Pag-IBIG Fund
+                  (HDMF), SM Aura Branch, from February to June 2026. Assigned to the MS II
+                  department, I provided operational support across daily office activities and
+                  occasionally assisted other departments, gaining a broad view of how a
+                  government organization runs.
+                </p>
+
+                <p>
+                  The internship let me apply my IT coursework in a real workplace —
+                  troubleshooting hardware and software issues, supporting basic network
+                  maintenance, and working hands-on with Ethernet cabling and office systems like
+                  the Pag-IBIG ER Virtual platform. Beyond the technical side, it strengthened my
+                  communication, attention to detail, and professionalism, especially when
+                  handling confidential member transactions — lessons I'll carry into my IT
+                  career.
+                </p>
+                </div>
+              </div>
+              <div class="disclosure-row">
+            <button class="disclosure-trigger">
+              <span class="chevron">▸</span>
+              <span class="row-title">Certifications</span>
+              <span class="row-meta">Click a card to see its overview</span>
+            </button>
+            <div class="disclosure-body">
+              <div class="cert-flip-grid">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="assets/cert-oracle-java-fundamentals.jpg" alt="Oracle Academy Java Fundamentals certificate">
+                      <div class="cert-title">Java Fundamentals — Oracle Academy</div>
+                    </div>
+                    <div class="flip-card-back">
+                      <h3>Java Fundamentals</h3>
+                      <p>Completed Oracle Academy's Java Fundamentals course, covering core Java syntax, object-oriented programming principles, and foundational problem-solving through code. Awarded June 24, 2023.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="assets/cert-sti-systems-administration.jpg" alt="STI Systems Administration certificate">
+                      <div class="cert-title">Systems Administration — STI</div>
+                    </div>
+                    <div class="flip-card-back">
+                      <h3>Systems Administration</h3>
+                      <p>Completed STI's Systems Administration course, part of the ICT curriculum, covering system setup, configuration, and maintenance fundamentals. Awarded June 24, 2023.</p>
+                    </div>
+                  </div>
+                </div>
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="assets/cert-sti-network-simulation-defense.jpg" alt="STI Network Simulation Facility Final Oral Defense certificate">
+                        <div class="cert-title">Network Simulation Final Defense — STI</div>
+                      </div>
+                      <div class="flip-card-back">
+                        <h3>Network Simulation Facility — Final Oral Defense</h3>
+                        <p>Certificate of Completion for the Network Simulation Facility Final Oral Defense in Data and Digital Communications, presented by STI College Global City's ICT and Engineering Department on December 10, 2024.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="assets/cert-cisco-it-customer-support.jpg" alt="Cisco Networking Academy IT Customer Support Basics badge">
+                        <div class="cert-title">IT Customer Support Basics — Cisco</div>
+                      </div>
+                      <div class="flip-card-back">
+                        <h3>IT Customer Support Basics</h3>
+                        <p>Verified completion of Cisco Networking Academy's IT Customer Support Basics course, covering foundational troubleshooting, customer service, and IT support skills.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </section>
 
           <!-- ABOUT KAY ELI -->
          <section class="view" id="view-about">
@@ -332,14 +485,14 @@
               availability and reservation system, I gained hands-on experience
               in developing and leading a real-world project. I’m currently
               aspiring to build a career as a Front-End Developer or Software
-              Engineer, creating modern, user-focused, and innovative solutions.
+              Engineer, creating modern, user-focused, and innovative solutions. 
             </p>
 
             <!-- Life Outside the Computer -->
             <div class="life-outside">
               <button class="life-toggle" id="lifeToggle">
                 <span>Life Outside the Computer</span>
-                <span id="lifeArrow">▼</span>
+                <span id="lifeArrow" class="toggle-arrow">▼</span>
               </button>
 
               <div class="life-content" id="lifeContent">
@@ -404,7 +557,52 @@
               with a fresh mind.
             </p>
 
-          </div>
+              </div>
+            </div>
+            <button class="life-toggle" id="momentsToggle">
+              
+              <span>Happiest Moments of My Life</span>
+              <span id="momentsArrow" class="toggle-arrow">▼</span>
+            </button>
+
+            <div class="life-content" id="momentsContent">
+              <div class="moments-layout">
+
+               <div class="moments-layout">
+
+                  <div class="moments-text">
+                    <p>
+                      Some of the happiest moments of my life have come from graduating,
+                      being surrounded by my family, and spending time with friends who
+                      keep me grounded. Click a stack to shuffle through the photos.
+                    </p>
+                  </div>
+
+                <div class="moments-stacks">
+
+                  <div class="photo-stack" data-stack="graduation">
+                    <p class="stack-label">Graduation</p>
+                    <div class="stack-frame">
+                      <img src="assets/moment-graduation-1.jpeg" alt="Graduation photo">
+                    </div>
+                  </div>
+
+                  <div class="photo-stack" data-stack="family">
+                    <p class="stack-label">Family</p>
+                    <div class="stack-frame">
+                      <img src="assets/moment-family-1.jpeg" alt="Family photo">
+                    </div>
+                  </div>
+
+                  <div class="photo-stack" data-stack="friends">
+                    <p class="stack-label">Friends</p>
+                    <div class="stack-frame">
+                      <img src="assets/moment-friends-1.jpeg" alt="Friends photo">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
             </div>
           </section>
 
@@ -456,5 +654,11 @@
 
     <!-- JAVASCRIPT -->
     <script src="script.js"></script>
+
+    <!-- CERTIFICATE LIGHTBOX -->
+    <div class="lightbox" id="cert-lightbox">
+      <button class="lightbox-close" id="cert-lightbox-close">✕</button>
+      <img src="" alt="" id="cert-lightbox-img">
+    </div>
   </body>
 </html>

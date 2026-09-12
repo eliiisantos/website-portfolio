@@ -1126,6 +1126,7 @@ body.dark .info-placeholder {
   font-weight: 600;
   text-align: left;
   cursor: pointer;
+  margin-bottom: 10px;
 
   display: flex;
   justify-content: space-between;
@@ -1162,22 +1163,25 @@ body.dark .info-placeholder {
   line-height: 1.7;
 }
 
-/* Dropdown opened */
+/* Dropdown opened — max-height is set dynamically by JS below */
 
 .life-content.active {
-  max-height: 500px;
   opacity: 1;
   padding: 10px 18px;
 }
 
 /* Rotate arrow when opened */
 
-.life-toggle.active #lifeArrow {
+.life-toggle.active .toggle-arrow {
   transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }
-/* ========================================
-   LIFE OUTSIDE ICONS
-   ======================================== */
+
+.toggle-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+/* LIFE OUTSIDE ICONS */
 
 .life-icons {
   display: grid;
@@ -1240,5 +1244,247 @@ body.dark .info-placeholder {
 @media (max-width: 450px) {
   .life-icons {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* =========================================
+   CERTIFICATE GALLERY + LIGHTBOX
+========================================= */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.gallery-item {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  text-align: left;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  display: block;
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+
+.gallery .caption {
+  display: block;
+  padding: 8px 10px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+/* CERTIFICATION FLIP CARDS */
+
+.cert-flip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flip-card {
+  width: 200px;
+  height: 250px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--sidebar-bg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  object-position: top;
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+
+.cert-title {
+  padding: 10px 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  padding: 16px;
+  justify-content: center;
+}
+
+.flip-card-back h3 {
+  font-size: 13.5px;
+  margin: 0 0 8px;
+  color: var(--text);
+}
+
+.flip-card-back p {
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+@media (max-width: 520px) {
+  .flip-card {
+    width: 100%;
+    max-width: 220px;
+  }
+}
+/* HAPPIEST MOMENTS */
+
+.moments-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.moments-text {
+  flex: 1;
+  min-width: 100%;
+}
+
+.moments-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+.moments-stacks {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.photo-stack {
+  cursor: pointer;
+  text-align: center;
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.stack-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dim);
+  margin: 0 0 8px;
+}
+
+.stack-frame {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--sidebar-bg);
+  transition: transform 0.15s ease;
+}
+
+.photo-stack:hover .stack-frame {
+  transform: translateY(-2px);
+}
+
+.stack-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.stack-frame img.shuffle-out {
+  transform: scale(0.85) rotate(-4deg);
+  opacity: 0;
+}
+
+@media (max-width: 520px) {
+  .moments-stacks {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .photo-stack {
+    flex: 1 1 100%;
+    min-width: 0;
   }
 }

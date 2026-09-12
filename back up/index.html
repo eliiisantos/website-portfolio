@@ -7,11 +7,22 @@
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
     <meta name="color-scheme" content="light" />
+
     <title>Elijah James F. Santos — Software Engineer</title>
+
+    <!-- Devicon -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Your CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -66,8 +77,13 @@
           </button>
 
           <button class="nav-item" data-view="projects">
-            <span class="nav-icon">📁</span>
-            Projects
+          <span class="nav-icon">📁</span>
+          Projects
+          </button>
+
+          <button class="nav-item" data-view="trainings">
+            <span class="nav-icon">🎓</span>
+            Trainings &amp; Certifications
           </button>
 
           <button class="nav-item" data-view="about">
@@ -115,7 +131,7 @@
 
               <div class="stats-row">
               <div class="stat-card">
-              <div class="stat-num">2</div>
+              <div class="stat-num">4</div>
               <div class="stat-label">Featured Projects</div>
            </div>
 
@@ -258,14 +274,14 @@
               <button class="disclosure-trigger">
                 <span class="chevron">▸</span>
                 <span class="row-title">HanaPark</span>
-                <span class="row-meta">HTML · CSS · JS · React</span>
+                <span class="row-meta">HTML · CSS · JS · React · Canva</span>
               </button>
               <div class="disclosure-body">
                 <p>
                   Smart web-based parking availability and reservation system
                   built for STI College Global City. Provides real-time parking
                   information and lets users reserve available spaces, reducing
-                  parking congestion and improving convenience. Built as the
+                  parking congestion and improving convenience. Act as the
                   frontend developer on this capstone project.
                 </p>
                 <a
@@ -285,7 +301,7 @@
                   >Wayward Games Network Infrastructure</span
                 >
                 <span class="row-meta"
-                  >AutoCAD · Figma · Cisco Packet Tracer</span
+                  >AutoCAD · Canva · Figma · Cisco Packet Tracer</span
                 >
               </button>
               <div class="disclosure-body">
@@ -296,16 +312,175 @@
                   out, with recommended PC specs for each department to operate
                   flawlessly.
                 </p>
-                <a
-                  href="wayward-games.html"
-                  target="_blank"
-                  rel="noopener"
-                  class="pill small"
-                  >View project →</a
-                >
+                <button
+                    type="button"
+                    class="pill small"
+                    onclick="window.open('wayward-games.html', '_blank')"
+                  >View project →</button>
               </div>
             </div>
+            <div class="disclosure-row">
+            <button class="disclosure-trigger">
+              <span class="chevron">▸</span>
+              <span class="row-title">ProTech — Mobile Security App</span>
+              <span class="row-meta">HTML · CSS · Figma · Canva</span>
+            </button>
+            <div class="disclosure-body">
+              <p>
+                A hard-coded UI/UX design concept for a mobile digital-privacy and security app,
+                covering login and nine core features — from a password strength analyzer to a
+                phishing detector — aimed at helping users protect their data and privacy online.
+              </p>
+              <button
+                type="button"
+                class="pill small"
+                onclick="window.open('protech.html', '_blank')"
+              >View project →</button>
+            </div>
+          </div>
+          <div class="disclosure-row">
+            <button class="disclosure-trigger">
+              <span class="chevron">▸</span>
+              <span class="row-title">Fempreneur</span>
+              <span class="row-meta">Canva</span>
+            </button>
+            <div class="disclosure-body">
+              <p>
+                A commissioned website wireframe for Fempreneur, a small business selling
+                handmade beaded jewelry and vintage clothing. My first web design project —
+                designed entirely in Canva.
+              </p>
+              <button
+                type="button"
+                class="pill small"
+                onclick="window.open('fempreneur.html', '_blank')"
+              >View project →</button>
+            </div>
+          </div>
           </section>
+
+          <!-- TRAININGS AND CERTIFICATIONS -->
+            <section class="view" id="view-trainings">
+              <h2>Trainings &amp; Certifications</h2>
+              <p class="section-sub">Click to expand.</p>
+
+              <div class="disclosure-row open">
+                <button class="disclosure-trigger">
+                  <span class="chevron">▸</span>
+                  <span class="row-title">On-the-Job Training — Office Trainee</span>
+                  <span class="row-meta">Pag-IBIG Fund (HDMF), SM Aura Branch · 486 hours · Feb 16 – Jun 4, 2026</span>
+                </button>
+                <div class="disclosure-body">
+
+                  <div class="gallery" style="margin-bottom:20px;">
+                    <button class="gallery-item" data-full="assets/cert-ojt-pagibig-id.jpg">
+                      <img src="assets/cert-ojt-pagibig-id.jpg" alt="Pag-IBIG Fund trainee ID">
+                      <span class="caption">Trainee ID</span>
+                    </button>
+                    <button class="gallery-item" data-full="assets/cert-ojt-pagibig-certificate.jpg">
+                      <img src="assets/cert-ojt-pagibig-certificate.jpg" alt="Certificate of Completion, Pag-IBIG Fund">
+                      <span class="caption">Certificate of Completion</span>
+                    </button>
+                  </div>
+
+                  <button class="life-toggle" id="ojtToggle">
+                  <span>Read Full Summary</span>
+                  <span id="ojtArrow">▼</span>
+                  </button>
+
+                  <div class="life-content" id="ojtContent">
+
+                  <p>
+                    My On-the-Job Training (OJT) experience at the Pag-IBIG Fund (HDMF) SM Aura Branch
+                    was a valuable and enriching part of my academic journey as a Bachelor of Science
+                    in Information Technology student at STI College Global City. Throughout my
+                    internship, which lasted from February to June and consisted of 486 completed
+                    hours, I was given the opportunity to experience a professional work environment
+                    and apply the knowledge and skills I acquired during my studies. The internship
+                    allowed me to gain practical experience while developing both my technical and
+                    interpersonal skills.
+                  </p>
+
+                  <p>
+                    During my training, I was assigned to the MS II department, where I assisted in
+                    ensuring the smooth operation of daily office activities. My responsibilities
+                    included providing operational support, assisting staff members with various
+                    tasks, and helping maintain the efficiency of office processes. Aside from
+                    supporting my assigned department, I was also given opportunities to assist
+                    other departments whenever technical assistance was needed. This exposure
+                    enabled me to gain a broader understanding of how different units within a
+                    government organization work together to deliver services to the public.
+                  </p>
+
+                  <p>
+                    One of the most significant aspects of my internship was the opportunity to
+                    apply my technical knowledge in real workplace situations. As an Information
+                    Technology student, I was able to utilize concepts learned from my Network
+                    Technology and other IT-related subjects. I assisted in troubleshooting
+                    computer hardware and software issues, diagnosing network connectivity
+                    problems, and supporting basic network maintenance activities. I also gained
+                    hands-on experience with Ethernet cabling, crimping tools, and office computer
+                    systems. These responsibilities enhanced my confidence in performing technical
+                    tasks and improved my ability to solve problems efficiently.
+                  </p>
+
+                  <p>
+                    In addition to technical work, I became familiar with several systems and
+                    applications used by Pag-IBIG Fund, including the Pag-IBIG ER Virtual platform,
+                    MP2 Savings Program processes, and Microsoft Excel. Learning how these systems
+                    operate gave me insight into how technology supports government services and
+                    improves operational efficiency. It also helped me appreciate the importance of
+                    accuracy, confidentiality, and professionalism when handling information and
+                    assisting with member-related transactions.
+                  </p>
+
+                  <p>
+                    One of the challenges I encountered during my internship involved tasks related
+                    to the MP2 Savings Program. Since these transactions involve sensitive and
+                    confidential information, it was important to exercise caution and
+                    responsibility when performing assigned duties. This experience taught me the
+                    importance of attention to detail and following established procedures to
+                    ensure that information remains secure and accurate. By remaining focused,
+                    observing workplace protocols, and seeking guidance from supervisors when
+                    necessary, I was able to perform my tasks effectively while maintaining
+                    professionalism.
+                  </p>
+
+                  <p>
+                    Beyond the technical skills I developed, the internship also strengthened my
+                    communication, teamwork, and adaptability. Working in a professional
+                    environment required me to interact with employees from different departments,
+                    follow organizational policies, and adjust to various work situations. These
+                    experiences helped me become more confident in collaborating with others and
+                    responding to workplace challenges. I learned that success in the workplace
+                    depends not only on technical competence but also on having a positive
+                    attitude, strong work ethic, and willingness to learn.
+                  </p>
+
+                  <p>
+                    Perhaps the most important lesson I learned during my OJT experience was the
+                    value of consistency. Performing tasks accurately, responsibly, and
+                    consistently contributes to the overall success of an organization. I realized
+                    that even small contributions can make a significant difference in maintaining
+                    efficient operations and providing quality public service. This lesson will
+                    continue to guide me as I pursue my future career in the field of information
+                    technology.
+                  </p>
+
+                  <p>
+                    Overall, my OJT experience at Pag-IBIG Fund SM Aura Branch was both educational
+                    and rewarding. It provided me with practical knowledge, workplace exposure, and
+                    professional skills that cannot be fully acquired inside a classroom. The
+                    experience strengthened my technical capabilities, improved my understanding of
+                    office operations, and prepared me for the expectations of the professional
+                    world. Through this internship, I gained valuable insights that will help me
+                    become a more competent, responsible, and effective IT professional in the
+                    future.
+                  </p>
+
+                </div>
+              </div>
+            </section>
 
           <!-- ABOUT KAY ELI -->
          <section class="view" id="view-about">
@@ -408,7 +583,7 @@
               </button>
 
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/eliiisantos"
                 target="_blank"
                 rel="noopener"
                 class="contact-row"
@@ -418,13 +593,24 @@
               </a>
 
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/elijah-james-santos-1762a33b9/"
                 target="_blank"
                 rel="noopener"
                 class="contact-row"
               >
                 <span class="contact-icon">💼</span>
-                <span>linkedin.com/in/elijah-james-santos-1762a33b9?</span>
+                <span>linkedin.com/in/elijah-james-santos</span>
+              </a>
+              <a
+                href="https://www.facebook.com/eljhsnts"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-row"
+              >
+                <span class="contact-icon">
+                  <i class="fa-brands fa-facebook"></i>
+                </span>
+                <span>facebook.com/eljhsnts</span>
               </a>
             </div>
           </section>
@@ -434,5 +620,11 @@
 
     <!-- JAVASCRIPT -->
     <script src="script.js"></script>
+
+    <!-- CERTIFICATE LIGHTBOX -->
+    <div class="lightbox" id="cert-lightbox">
+      <button class="lightbox-close" id="cert-lightbox-close">✕</button>
+      <img src="" alt="" id="cert-lightbox-img">
+    </div>
   </body>
 </html>

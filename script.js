@@ -218,6 +218,164 @@ const lifeContent = document.getElementById("lifeContent");
 const lifeArrow = document.getElementById("lifeArrow");
 
 lifeToggle.addEventListener("click", () => {
-  lifeContent.classList.toggle("active");
+  const isOpen = lifeContent.classList.contains("active");
+
+  if (isOpen) {
+    // Closing — animate back down to 0
+    lifeContent.style.maxHeight = lifeContent.scrollHeight + "px";
+    requestAnimationFrame(() => {
+      lifeContent.style.maxHeight = "0px";
+    });
+    lifeContent.classList.remove("active");
+  } else {
+    // Opening — measure the real content height and use that
+    lifeContent.classList.add("active");
+    lifeContent.style.maxHeight = lifeContent.scrollHeight + "px";
+  }
+
   lifeToggle.classList.toggle("active");
+});
+
+/* CERTIFICATE LIGHTBOX */
+
+const certLightbox = document.getElementById("cert-lightbox");
+
+if (certLightbox) {
+  const certLightboxImg = document.getElementById("cert-lightbox-img");
+  const certLightboxClose = document.getElementById("cert-lightbox-close");
+
+  document.querySelectorAll(".gallery-item").forEach((item) => {
+    item.addEventListener("click", () => {
+      certLightboxImg.src = item.dataset.full;
+      certLightboxImg.alt = item.querySelector("img").alt;
+      certLightbox.classList.add("open");
+    });
+  });
+
+  function closeCertLightbox() {
+    certLightbox.classList.remove("open");
+    certLightboxImg.src = "";
+  }
+
+  certLightboxClose.addEventListener("click", closeCertLightbox);
+  certLightbox.addEventListener("click", (e) => {
+    if (e.target === certLightbox) closeCertLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeCertLightbox();
+  });
+}
+
+/* OJT SUMMARY DROPDOWN */
+
+const ojtToggle = document.getElementById("ojtToggle");
+const ojtContent = document.getElementById("ojtContent");
+
+if (ojtToggle) {
+  ojtToggle.addEventListener("click", () => {
+    const isOpen = ojtContent.classList.contains("active");
+
+    if (isOpen) {
+      ojtContent.style.maxHeight = ojtContent.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        ojtContent.style.maxHeight = "0px";
+      });
+      ojtContent.classList.remove("active");
+    } else {
+      ojtContent.classList.add("active");
+      ojtContent.style.maxHeight = ojtContent.scrollHeight + "px";
+    }
+
+    ojtToggle.classList.toggle("active");
+  });
+}
+/* CERTIFICATION FLIP CARDS */
+
+document.querySelectorAll(".flip-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+  });
+});
+/* HAPPIEST MOMENTS TOGGLE */
+
+const momentsToggle = document.getElementById("momentsToggle");
+const momentsContent = document.getElementById("momentsContent");
+
+function recalcMomentsHeight() {
+  if (momentsContent.classList.contains("active")) {
+    momentsContent.style.maxHeight = momentsContent.scrollHeight + "px";
+  }
+}
+
+if (momentsToggle) {
+  momentsToggle.addEventListener("click", () => {
+    const isOpen = momentsContent.classList.contains("active");
+
+    if (isOpen) {
+      momentsContent.style.maxHeight = momentsContent.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        momentsContent.style.maxHeight = "0px";
+      });
+      momentsContent.classList.remove("active");
+    } else {
+      momentsContent.classList.add("active");
+      momentsContent.style.maxHeight = momentsContent.scrollHeight + "px";
+
+      // Re-measure once every photo has actually finished loading
+      const imgs = momentsContent.querySelectorAll("img");
+      imgs.forEach((img) => {
+        if (!img.complete) {
+          img.addEventListener("load", recalcMomentsHeight);
+        }
+      });
+      // Also catch any late layout shifts
+      setTimeout(recalcMomentsHeight, 300);
+    }
+
+    momentsToggle.classList.toggle("active");
+  });
+}
+
+/* PHOTO STACK SHUFFLE */
+
+const stackImages = {
+  graduation: ["assets/moment-graduation-1.jpeg"],
+  family: [
+    "assets/moment-family-1.jpeg",
+    "assets/moment-family-2.jpeg",
+    "assets/moment-family-3.jpeg",
+    "assets/moment-family-4.jpeg",
+    "assets/moment-family-5.jpeg",
+    "assets/moment-family-6.jpeg"
+  ],
+  friends: [
+    "assets/moment-friends-1.jpeg",
+    "assets/moment-friends-2.jpeg",
+    "assets/moment-friends-3.jpeg",
+    "assets/moment-friends-4.jpeg",
+    "assets/moment-friends-5.jpeg"
+  ]
+};
+
+const stackIndex = { graduation: 0, family: 0, friends: 0 };
+
+document.querySelectorAll(".photo-stack").forEach((stack) => {
+  stack.addEventListener("click", () => {
+    const key = stack.dataset.stack;
+    const images = stackImages[key];
+
+    if (images.length <= 1) return;
+
+    const img = stack.querySelector("img");
+
+    img.classList.add("shuffle-out");
+
+    setTimeout(() => {
+      stackIndex[key] = (stackIndex[key] + 1) % images.length;
+      img.src = images[stackIndex[key]];
+      img.classList.remove("shuffle-out");
+
+      img.addEventListener("load", recalcMomentsHeight, { once: true });
+    }, 200);
+  });
 });
