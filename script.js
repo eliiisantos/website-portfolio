@@ -296,7 +296,6 @@ document.querySelectorAll(".flip-card").forEach((card) => {
     card.classList.toggle("flipped");
   });
 });
-/* HAPPIEST MOMENTS TOGGLE */
 
 const momentsToggle = document.getElementById("momentsToggle");
 const momentsContent = document.getElementById("momentsContent");
@@ -321,22 +320,18 @@ if (momentsToggle) {
       momentsContent.classList.add("active");
       momentsContent.style.maxHeight = momentsContent.scrollHeight + "px";
 
-      // Re-measure once every photo has actually finished loading
       const imgs = momentsContent.querySelectorAll("img");
       imgs.forEach((img) => {
         if (!img.complete) {
           img.addEventListener("load", recalcMomentsHeight);
         }
       });
-      // Also catch any late layout shifts
       setTimeout(recalcMomentsHeight, 300);
     }
 
     momentsToggle.classList.toggle("active");
   });
 }
-
-/* PHOTO STACK SHUFFLE */
 
 const stackImages = {
   graduation: ["assets/moment-graduation-1.jpeg"],
@@ -346,7 +341,8 @@ const stackImages = {
     "assets/moment-family-3.jpeg",
     "assets/moment-family-4.jpeg",
     "assets/moment-family-5.jpeg",
-    "assets/moment-family-6.jpeg"
+    "assets/moment-family-6.jpeg",
+    "assets/moment-family-7.jpeg"
   ],
   friends: [
     "assets/moment-friends-1.jpeg",
