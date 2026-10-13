@@ -1,6 +1,4 @@
-/* =========================================
-   ROOT VARIABLES
-========================================= */
+/* ROOT VARIABLES */
 
 :root{
   color-scheme:light;
@@ -14,9 +12,7 @@
 }
 
 
-/* =========================================
-   DARK MODE VARIABLES
-========================================= */
+/* DARK MODE VARIABLES */
 
 body.dark {
   --sidebar-bg: #1C1C1E;
@@ -34,9 +30,7 @@ body.dark {
 }
 
 
-/* =========================================
-   RESET
-========================================= */
+/* RESET */
 
 * {
   box-sizing: border-box;
@@ -67,9 +61,7 @@ body {
 }
 
 
-/* =========================================
-   MAC WINDOW
-========================================= */
+/* MAC WINDOW */
 
 .mac-window{
   width:100vw;
@@ -82,9 +74,7 @@ body {
 }
 
 
-/* =========================================
-   TITLE BAR
-========================================= */
+/* TITLE BAR */
 
 .titlebar {
   height: 38px;
@@ -107,9 +97,7 @@ body {
 }
 
 
-/* =========================================
-   MAC TRAFFIC LIGHTS
-========================================= */
+/* MAC TRAFFIC LIGHTS */
 
 .traffic-lights {
   display: flex;
@@ -135,9 +123,7 @@ body {
 }
 
 
-/* =========================================
-   WINDOW TITLE
-========================================= */
+/* WINDOW TITLE */
 
 .window-title {
   position: absolute;
@@ -158,9 +144,7 @@ body {
 }
 
 
-/* =========================================
-   DARK / LIGHT TOGGLE
-========================================= */
+/* DARK / LIGHT TOGGLE */
 
 .theme-toggle {
   position: absolute;
@@ -212,9 +196,7 @@ body.dark .theme-toggle:hover {
 }
 
 
-/* =========================================
-   BODY LAYOUT
-========================================= */
+/* BODY LAYOUT */
 
 .window-body {
   flex: 1;
@@ -278,9 +260,7 @@ body.dark .theme-toggle:hover {
   justify-content:center;
 }
 
-/* =========================================
-   SIDEBAR
-========================================= */
+/* SIDEBAR */
 
 .sidebar {
   width: 230px;
@@ -300,9 +280,7 @@ body.dark .theme-toggle:hover {
 }
 
 
-/* =========================================
-   SIDEBAR PROFILE
-========================================= */
+/* SIDEBAR PROFILE */
 
 .sidebar-profile {
   text-align: center;
@@ -318,9 +296,7 @@ body.dark .theme-toggle:hover {
 }
 
 
-/* =========================================
-   PROFILE PHOTO
-========================================= */
+/*  PROFILE PHOTO */
 
 .avatar {
   width: 56px;
@@ -350,20 +326,13 @@ body.dark .theme-toggle:hover {
   height: 100%;
 
   object-fit: cover;
-
-  /*
-    Keeps your face more centered
-    inside the circular image.
-  */
   object-position: center 25%;
 
   display: block;
 }
 
 
-/* =========================================
-   SIDEBAR TEXT
-========================================= */
+/* SIDEBAR TEXT */
 
 .sidebar-name {
   font-weight: 600;
@@ -381,9 +350,7 @@ body.dark .theme-toggle:hover {
 }
 
 
-/* =========================================
-   NAVIGATION
-========================================= */
+/* NAVIGATION */
 
 .nav-item {
   width: 100%;
@@ -435,9 +402,7 @@ body.dark .theme-toggle:hover {
 }
 
 
-/* =========================================
-   CONTENT
-========================================= */
+/* CONTENT */
 
 .content {
   flex: 1;
@@ -455,9 +420,7 @@ body.dark .theme-toggle:hover {
 }
 
 
-/* =========================================
-   VIEWS
-========================================= */
+/* VIEWS */
 
 .view {
   display: none;
@@ -475,9 +438,7 @@ body.dark .theme-toggle:hover {
 }
 
 
-/* =========================================
-   FADE ANIMATION
-========================================= */
+/* FADE ANIMATION */
 
 @keyframes fadeIn {
 
@@ -498,9 +459,7 @@ body.dark .theme-toggle:hover {
 }
 
 
-/* =========================================
-   TYPOGRAPHY
-========================================= */
+/* TYPOGRAPHY */
 
 h1 {
   font-size: 32px;
@@ -529,9 +488,7 @@ h2 {
 }
 
 
-/* =========================================
-   WAVE
-========================================= */
+/* WAVE */
 
 .wave {
   display: inline-block;
@@ -574,9 +531,7 @@ h2 {
 }
 
 
-/* =========================================
-   HOME DESCRIPTION
-========================================= */
+/*  HOME DESCRIPTION */
 
 .lede {
   font-size: 16px;
@@ -589,9 +544,7 @@ h2 {
 }
 
 
-/* =========================================
-   SECTION SUBTITLE
-========================================= */
+/* SECTION SUBTITLE */
 
 .section-sub {
   font-size: 13.5px;
@@ -605,9 +558,7 @@ h2 {
 }
 
 
-/* =========================================
-   QUICK LINKS
-========================================= */
+/* QUICK LINKS */
 
 .quick-links {
   display: flex;
@@ -620,9 +571,7 @@ h2 {
 }
 
 
-/* =========================================
-   PILLS / BUTTONS
-========================================= */
+/* PILLS / BUTTONS */
 
 .pill {
   background: var(--blue);
@@ -670,9 +619,7 @@ h2 {
 }
 
 
-/* =========================================
-   TECH STACK
-========================================= */
+/* TECH STACK */
 
 .stack-category {
   margin-bottom: 26px;
@@ -702,9 +649,7 @@ h2 {
 }
 
 
-/* =========================================
-   TECH TILES
-========================================= */
+/* TECH TILES */
 
 .tile {
   display: flex;
@@ -783,9 +728,7 @@ body.dark .tile:hover {
 }
 
 
-/* =========================================
-   INFO PANEL
-========================================= */
+/* INFO PANEL */
 
 .info-panel {
   margin-top: 20px;
@@ -846,9 +789,7 @@ body.dark .tile:hover {
 }
 
 
-/* =========================================
-   PROJECTS
-========================================= */
+/* PROJECTS */
 
 .disclosure-row {
   border-bottom: 1px solid var(--border);
@@ -932,9 +873,7 @@ body.dark .tile:hover {
 }
 
 
-/* =========================================
-   PLACEHOLDER TEXT
-========================================= */
+/* PLACEHOLDER TEXT */
 
 .placeholder {
   color: var(--text-dim);
@@ -947,9 +886,7 @@ body.dark .tile:hover {
 }
 
 
-/* =========================================
-   CONTACT
-========================================= */
+/* CONTACT */
 
 .contact-card {
   border: 1px solid var(--border);
@@ -1001,10 +938,7 @@ body.dark .tile:hover {
   font-size: 17px;
 }
 
-
-/* =========================================
-   SCROLLBARS
-========================================= */
+/*  SCROLLBARS */
 
 .content::-webkit-scrollbar,
 .sidebar::-webkit-scrollbar {
@@ -1023,10 +957,7 @@ body.dark .sidebar::-webkit-scrollbar-thumb {
   background: #48484A;
 }
 
-
-/* =========================================
-   DARK MODE TEXT FIX
-========================================= */
+/* DARK MODE */
 
 body.dark h1,
 body.dark h2,
@@ -1050,11 +981,6 @@ body.dark .info-panel p,
 body.dark .info-placeholder {
   color: #98989D;
 }
-
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width:720px){
   .window-body{ flex-direction:column; }
@@ -1107,9 +1033,7 @@ body.dark .info-placeholder {
   .lede {
     font-size: 15px;
   }
-  /* ========================================
-   LIFE OUTSIDE THE COMPUTER
-   ======================================== */
+  /* LIFE OUTSIDE THE COMPUTER */
 
 .life-outside {
   margin-top: 25px;
@@ -1163,7 +1087,7 @@ body.dark .info-placeholder {
   line-height: 1.7;
 }
 
-/* Dropdown opened — max-height is set dynamically by JS below */
+/* Dropdown */
 
 .life-content.active {
   opacity: 1;
@@ -1246,9 +1170,7 @@ body.dark .info-placeholder {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-/* =========================================
-   CERTIFICATE GALLERY + LIGHTBOX
-========================================= */
+/* CERTIFICATE GALLERY + LIGHTBOX */
 
 .gallery {
   display: grid;

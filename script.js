@@ -209,9 +209,8 @@ if (copyEmailBtn) {
     });
   });
 }
-// ========================================
-// LIFE OUTSIDE THE COMPUTER DROPDOWN
-// ========================================
+
+/*/ LIFE OUTSIDE THE COMPUTER DROPDOWN */
 
 const lifeToggle = document.getElementById("lifeToggle");
 const lifeContent = document.getElementById("lifeContent");
