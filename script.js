@@ -46,7 +46,7 @@ const techInfo = {
     text: "Microsoft SQL Server — a relational database used to store and query structured, table-based data.",
   },
 
-    mysql: {
+  mysql: {
     name: "MYSQL",
     text: "MySQL – A relational database system used to store, organize, and manage structured application data.",
   },
@@ -373,4 +373,80 @@ document.querySelectorAll(".photo-stack").forEach((stack) => {
       img.addEventListener("load", recalcMomentsHeight, { once: true });
     }, 200);
   });
+});
+
+const dv = (p) => `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${p}.svg`;
+const si = (slug, color) => `https://cdn.simpleicons.org/${slug}/${color}`;
+
+const techStack = [
+  {
+    group: "Frontend Development",
+    items: [
+      { name: "HTML5", icon: dv("html5/html5-original"), desc: "The markup language that gives every web page its structure." },
+      { name: "CSS3", icon: dv("css3/css3-original"), desc: "The styling language for layout, colors, and responsive design." },
+      { name: "JavaScript", icon: dv("javascript/javascript-original"), desc: "The language that makes web pages interactive." },
+      { name: "React", icon: dv("react/react-original"), desc: "A JavaScript library for building interfaces from reusable components." },
+      { name: "Vite", icon: dv("vitejs/vitejs-original"), desc: "A fast build tool and dev server for modern web projects." },
+      { name: "Next.js", icon: dv("nextjs/nextjs-original"), invert: true, desc: "A React framework for full web apps with routing and server rendering." },
+    ],
+  },
+  {
+    group: "Backend Development",
+    items: [
+      { name: "Node.js", icon: dv("nodejs/nodejs-original"), desc: "A runtime that lets JavaScript run on the server." },
+      { name: "Java", icon: dv("java/java-original"), desc: "A general-purpose, object-oriented language used for backend and enterprise apps." },
+      { name: "Python", icon: dv("python/python-original"), desc: "A readable, versatile language used for backend, scripting, and data work." },
+      { name: "C#", icon: dv("csharp/csharp-original"), desc: "A modern object-oriented language from Microsoft, used with .NET." },
+    ],
+  },
+  {
+    group: "Databases",
+    items: [
+      { name: "MySQL", icon: dv("mysql/mysql-original"), desc: "An open-source relational database that uses SQL." },
+      { name: "MSSQL", icon: dv("microsoftsqlserver/microsoftsqlserver-plain"), desc: "Microsoft SQL Server, a relational database management system." },
+      { name: "Oracle DB", icon: dv("oracle/oracle-original"), desc: "Oracle Database, a widely used enterprise relational database." },
+      { name: "MongoDB", icon: dv("mongodb/mongodb-original"), desc: "A NoSQL database that stores data as flexible, JSON-like documents." },
+    ],
+  },
+  {
+    group: "DevOps & Deployment",
+    items: [
+      { name: "GitHub", icon: dv("github/github-original"), invert: true, desc: "A platform for hosting Git repositories and collaborating on code." },
+      { name: "Git", icon: dv("git/git-original"), desc: "A version control system that tracks changes to your code." },
+      { name: "Vercel", icon: dv("vercel/vercel-original"), invert: true, desc: "A hosting platform that deploys web apps automatically from GitHub." },
+    ],
+  },
+  {
+    group: "AI & Development Tools",
+    items: [
+      { name: "VS Code", icon: dv("vscode/vscode-original"), desc: "A free, extensible code editor from Microsoft." },
+      { name: "Codex", icon: "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/openai.svg", invert: true, desc: "OpenAI's AI coding agent that helps write and review code." },
+      { name: "Claude Code", icon: si("claude", "D97757"), desc: "Anthropic's AI coding assistant that works in the terminal and editor." },
+      { name: "Copilot", icon: si("githubcopilot", "ffffff"), desc: "GitHub's AI pair programmer that suggests code as you type." },
+    ],
+  },
+];
+
+const tsGroups = document.getElementById("ts-groups");
+const tsDetail = document.getElementById("ts-detail");
+
+techStack.forEach((g) => {
+  const wrap = document.createElement("div");
+  wrap.className = "ts-group";
+  wrap.innerHTML = `<h3 class="ts-label">${g.group}</h3><div class="ts-grid"></div>`;
+  const grid = wrap.querySelector(".ts-grid");
+
+  g.items.forEach((t) => {
+    const btn = document.createElement("button");
+    btn.className = "ts-tile";
+    btn.innerHTML = `<img src="${t.icon}" alt="" class="${t.invert ? "ts-invert" : ""}" onerror="this.style.visibility='hidden'"><span>${t.name}</span>`;
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".ts-tile").forEach((x) => x.classList.remove("on"));
+      btn.classList.add("on");
+      tsDetail.innerHTML = `<strong>${t.name}</strong> ${t.desc}`;
+    });
+    grid.appendChild(btn);
+  });
+
+  tsGroups.appendChild(wrap);
 });

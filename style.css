@@ -1410,3 +1410,17 @@ body.dark .info-placeholder {
     min-width: 0;
   }
 }
+
+.ts { padding: 24px 0; color: #fff; }
+.ts-title { margin: 0; font-size: 28px; font-weight: 700; }
+.ts-sub { margin: 4px 0 24px; color: #9a9aa0; font-weight: 300; }
+.ts-group { margin-bottom: 28px; }
+.ts-label { margin: 0 0 12px; font-size: 14px; font-weight: 300; letter-spacing: 0.04em; text-transform: uppercase; color: #c9c9ce; }
+.ts-grid { display: flex; flex-wrap: wrap; gap: 13px; }
+.ts-tile { width: 102px; height: 96px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: #1c1c1e; border: 1px solid #2b2b2f; border-radius: 14px; color: #fff; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; transition: border-color 0.15s, background 0.15s, transform 0.15s; }
+.ts-tile img { width: 36px; height: 36px; object-fit: contain; }
+.ts-invert { filter: invert(1); }
+.ts-tile:hover { border-color: #5a5a60; background: #232326; transform: translateY(-2px); }
+.ts-tile.on { border-color: #fff; }
+.ts-detail { max-width: 800px; padding: 22px 26px; background: #1c1c1e; border: 1px solid #2b2b2f; border-radius: 16px; color: #9a9aa0; font-style: italic; }
+.ts-detail strong { color: #fff; font-style: normal; }
